@@ -1,7 +1,8 @@
-[gd_scene load_steps=16 format=3 uid="uid://cg44dj5hv1r83"]
+[gd_scene load_steps=17 format=3 uid="uid://cg44dj5hv1r83"]
 
 [ext_resource type="PackedScene" uid="uid://cvryadbcsg71y" path="res://scenes/management/game_level.tscn" id="1_qrium"]
 [ext_resource type="PackedScene" uid="uid://dy7n70fq837tg" path="res://scenes/trap/trap.tscn" id="2_gee2g"]
+[ext_resource type="Texture2D" uid="uid://ctijhepn7gxv0" path="res://images/interface/Ativo 7-8.png" id="2_uamak"]
 [ext_resource type="PackedScene" uid="uid://c3leiijt46i16" path="res://scenes/enemys/slime.tscn" id="3_765kv"]
 [ext_resource type="FontFile" uid="uid://b8kafgdikpmtu" path="res://assets/monogram.ttf" id="4_08eba"]
 [ext_resource type="Texture2D" uid="uid://xep7lemptr85" path="res://images/arvores/t1.png" id="5_0qfdr"]
@@ -12,8 +13,8 @@
 [ext_resource type="PackedScene" uid="uid://bxesarhe7rtwb" path="res://scenes/player/villainess_lvl_0.tscn" id="10_ecbd5"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_wu867"]
-radius = 14.0
-height = 44.0
+radius = 11.0
+height = 22.0
 
 [sub_resource type="LabelSettings" id="LabelSettings_e6vmr"]
 font = ExtResource("4_08eba")
@@ -43,6 +44,11 @@ position = Vector2(-3, -77)
 [node name="Collision" type="CollisionShape2D" parent="Portal" index="0"]
 position = Vector2(1632, 356)
 shape = SubResource("CapsuleShape2D_wu867")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal" index="1"]
+position = Vector2(1632, 355)
+scale = Vector2(0.139584, 0.140626)
+texture = ExtResource("2_uamak")
 
 [node name="BaseTerrain" parent="Terrain" index="0"]
 z_index = 20

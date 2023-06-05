@@ -12,7 +12,7 @@ var knockback_direction: Vector2
 @export var move_speed: float = 96.00
 @export var jump_speed: float = -256.00
 @export var gravity_speed: float = 512.00
-@export var health: float = 25.0
+@export var health: float = 10.0
 @export var damage: int
 
 func _ready() -> void:
@@ -104,7 +104,10 @@ func _on_hitbox_area_entered(area):
 	if area.is_in_group("buraco"):
 		character_died()
 	if area.is_in_group("portal"):
+		transition_screen.fade_in()
 		get_tree().change_scene_to_file('res://scenes/management/level_1.tscn')
+		get_tree().paused = false
+
 
 
 

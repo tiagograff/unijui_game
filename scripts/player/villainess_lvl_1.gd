@@ -8,11 +8,12 @@ var is_on_double_jump: bool = false
 var on_knockback = false
 var max_health: float = 0.0
 var knockback_direction: Vector2
+var power_comp=preload("res://scenes/powers/power.tscn")
 
 @export var move_speed: float = 96.00
 @export var jump_speed: float = -256.00
 @export var gravity_speed: float = 512.00
-@export var health: float = 25.0
+@export var health: float = 30.0
 @export var damage: int
 
 func _ready() -> void:
@@ -35,6 +36,13 @@ func _physics_process(delta) -> void:
 		if obj.is_in_group("enemy"):
 			obj.damage()
 			velocity.y = jump_speed
+
+	if Input.is_action_just_pressed("power"):
+		var fireball = power_comp.instantiate()
+		var side =sign($Texture.scale.x)
+		fireball.position=self.position+Vector2(30*side,-30)
+		fireball.linear_velocity=Vector2(side*1000,0)
+		get_node("..").add_child(fireball)
 
 func knockback_move():
 	velocity = knockback_direction * move_speed * 2

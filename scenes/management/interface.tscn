@@ -1,0 +1,34 @@
+[gd_scene load_steps=6 format=3 uid="uid://dcd1e12a1cwin"]
+
+[ext_resource type="Texture2D" uid="uid://chkxjwvn67fji" path="res://images/interface/Ativo 18-8.png" id="1_xocwo"]
+[ext_resource type="Texture2D" uid="uid://cjqu8ixyjfskq" path="res://images/interface/Ativo 19-8.png" id="2_nscd5"]
+[ext_resource type="Texture2D" uid="uid://isb75uxc5imf" path="res://images/interface/Ativo 20-8.png" id="3_g83sh"]
+[ext_resource type="Texture2D" uid="uid://cut4bp0wmk3ro" path="res://images/interface/Ativo 16-8.png" id="4_3qn7j"]
+[ext_resource type="Texture2D" uid="uid://srnnullog355" path="res://images/interface/Ativo 17-8.png" id="5_we74b"]
+
+[node name="Interface" type="CanvasLayer"]
+
+[node name="Ativo18-8" type="Sprite2D" parent="."]
+position = Vector2(529.938, 275.313)
+scale = Vector2(0.075446, 0.0655758)
+texture = ExtResource("1_xocwo")
+
+[node name="Ativo19-8" type="Sprite2D" parent="."]
+position = Vector2(48, 275)
+scale = Vector2(0.0546647, 0.0432433)
+texture = ExtResource("2_nscd5")
+
+[node name="Ativo20-8" type="Sprite2D" parent="."]
+position = Vector2(37.625, 25.625)
+scale = Vector2(0.0129702, 0.0203756)
+texture = ExtResource("3_g83sh")
+
+[node name="Ativo16-8" type="Sprite2D" parent="."]
+position = Vector2(25, 27)
+scale = Vector2(0.125, 0.09375)
+texture = ExtResource("4_3qn7j")
+
+[node name="Ativo17-8" type="Sprite2D" parent="."]
+position = Vector2(44.8125, 26.5)
+scale = Vector2(0.12793, 0.117188)
+texture = ExtResource("5_we74b")

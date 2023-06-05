@@ -41,5 +41,7 @@ func damage() -> void:
 	$Animated.play("dead")
 
 
-func on_hit_box_body_entered(_body):
-	pass
+func on_hit_box_body_entered(body):
+	if body.is_in_group("power"):
+		damage()
+		body.queue_free()

@@ -1,0 +1,97 @@
+[gd_scene load_steps=11 format=3 uid="uid://c3leiijt46i16"]
+
+[ext_resource type="Script" path="res://scripts/enemy/slime.gd" id="1_u4rla"]
+[ext_resource type="Texture2D" uid="uid://602vip1r53hp" path="res://images/slime/i4.png" id="2_inuil"]
+[ext_resource type="Texture2D" uid="uid://boq3w6euv2qbq" path="res://images/slime/i5.png" id="3_5pv86"]
+[ext_resource type="Texture2D" uid="uid://lr3747id7q7h" path="res://images/slime/i6.png" id="4_gxv2j"]
+[ext_resource type="Texture2D" uid="uid://cmt5hbom24w3m" path="res://images/slime/i1.png" id="5_o2cp1"]
+[ext_resource type="Texture2D" uid="uid://d0gctwcrj8uy1" path="res://images/slime/i2.png" id="6_vqqip"]
+[ext_resource type="Texture2D" uid="uid://chaucixpl7p5h" path="res://images/slime/i3.png" id="7_x3w5g"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_iuqu1"]
+radius = 144.0
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_lw3mp"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_inuil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5pv86")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_gxv2j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_5pv86")
+}],
+"loop": false,
+"name": &"dead",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("5_o2cp1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_vqqip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_inuil")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_x3w5g")
+}],
+"loop": true,
+"name": &"stand",
+"speed": 5.0
+}]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_hk624"]
+radius = 40.1995
+
+[node name="Slime" type="CharacterBody2D" groups=["enemy", "slime"]]
+z_index = 21
+scale = Vector2(0.25, 0.25)
+script = ExtResource("1_u4rla")
+
+[node name="Collision" type="CollisionShape2D" parent="." groups=["enemy"]]
+position = Vector2(0, -28)
+scale = Vector2(0.25, 0.25)
+shape = SubResource("CircleShape2D_iuqu1")
+metadata/_edit_lock_ = true
+
+[node name="Animated" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -28)
+scale = Vector2(2.8, 2.889)
+sprite_frames = SubResource("SpriteFrames_lw3mp")
+animation = &"stand"
+autoplay = "stand"
+frame = 1
+frame_progress = 0.307945
+metadata/_edit_lock_ = true
+
+[node name="Ray_Right" type="RayCast2D" parent="."]
+position = Vector2(0, -32)
+target_position = Vector2(44, 0)
+
+[node name="Ray_Left" type="RayCast2D" parent="."]
+position = Vector2(0, -33)
+target_position = Vector2(-44, 1)
+
+[node name="Ray_Down_Right" type="RayCast2D" parent="."]
+position = Vector2(38, -33)
+target_position = Vector2(0, 40)
+
+[node name="Ray_Down_Left" type="RayCast2D" parent="."]
+position = Vector2(-35, -33)
+target_position = Vector2(0, 40)
+
+[node name="HitBox" type="Area2D" parent="." groups=["enemy"]]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox"]
+position = Vector2(0, -28)
+shape = SubResource("CircleShape2D_hk624")
+
+[connection signal="body_entered" from="HitBox" to="." method="on_hit_box_body_entered"]

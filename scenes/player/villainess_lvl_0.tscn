@@ -1,0 +1,32 @@
+[gd_scene load_steps=5 format=3 uid="uid://bxesarhe7rtwb"]
+
+[ext_resource type="PackedScene" uid="uid://c4wya75xxvkjg" path="res://scenes/player/villainess.tscn" id="1_rr63l"]
+[ext_resource type="FontFile" uid="uid://b8kafgdikpmtu" path="res://assets/monogram.ttf" id="2_onh7e"]
+[ext_resource type="Script" path="res://scripts/texts/Controls.gd" id="3_fywp4"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_s78dr"]
+font = ExtResource("2_onh7e")
+outline_size = 5
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 2
+
+[node name="Villainess_lvl0" instance=ExtResource("1_rr63l")]
+
+[node name="Controls" type="Label" parent="Camera2D" index="0"]
+z_index = 2
+anchors_preset = -1
+anchor_right = 0.137153
+anchor_bottom = 0.151235
+offset_left = -33.0
+offset_top = -60.0
+offset_right = 33.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+text = "  controls:
+A         D
+   SPACE
+"
+label_settings = SubResource("LabelSettings_s78dr")
+script = ExtResource("3_fywp4")
+metadata/_edit_use_anchors_ = true

@@ -1,0 +1,9 @@
+[gd_scene load_steps=3 format=3 uid="uid://dwyv3aqpoeup6"]
+
+[ext_resource type="PackedScene" uid="uid://bmuwjcduhhyyi" path="res://scenes/objects/object_tamplete.tscn" id="1_ila6i"]
+[ext_resource type="Texture2D" uid="uid://behad0eadeyva" path="res://images/t4.png" id="2_x8jm8"]
+
+[node name="tree_3" instance=ExtResource("1_ila6i")]
+
+[node name="Texture" parent="." index="0"]
+texture = ExtResource("2_x8jm8")

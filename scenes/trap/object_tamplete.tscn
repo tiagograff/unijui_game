@@ -1,0 +1,9 @@
+[gd_scene format=3 uid="uid://b8v551m0ru5y7"]
+
+[node name="ObjectTamplete" type="StaticBody2D"]
+
+[node name="DetectionArea" type="Area2D" parent="."]
+
+[node name="Texture" type="Sprite2D" parent="."]
+
+[node name="Collision" type="CollisionShape2D" parent="."]

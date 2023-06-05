@@ -1,0 +1,7 @@
+[gd_scene load_steps=3 format=3 uid="uid://buwywe18pvsvx"]
+
+[ext_resource type="PackedScene" uid="uid://c4wya75xxvkjg" path="res://scenes/player/villainess.tscn" id="1_38nqh"]
+[ext_resource type="Script" path="res://scripts/player/villainess_lvl_1.gd" id="2_u5lv5"]
+
+[node name="Villainess_lvl1" instance=ExtResource("1_38nqh")]
+script = ExtResource("2_u5lv5")

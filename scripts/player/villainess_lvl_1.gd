@@ -9,6 +9,7 @@ var on_knockback = false
 var max_health: float = 0.0
 var knockback_direction: Vector2
 var power_comp=preload("res://scenes/powers/power.tscn")
+var power_direction: float = 0;
 
 @export var move_speed: float = 96.00
 @export var jump_speed: float = -256.00
@@ -39,7 +40,7 @@ func _physics_process(delta) -> void:
 
 	if Input.is_action_just_pressed("power"):
 		var fireball = power_comp.instantiate()
-		var side =sign($Texture.scale.x)
+		var side = power_direction;
 		fireball.position=self.position+Vector2(30*side,-30)
 		fireball.linear_velocity=Vector2(side*1000,0)
 		get_node("..").add_child(fireball)
@@ -53,6 +54,7 @@ func move() -> void:
 	var direction: float = get_direction()
 	velocity.x = direction * move_speed
 	if(direction != 0 && $Footsteps_timer.time_left <= 0 && is_on_floor()):
+		power_direction = direction;
 		$Footsteps.pitch_scale = 1
 		$Footsteps.play()
 		$Footsteps_timer.start(0.3)

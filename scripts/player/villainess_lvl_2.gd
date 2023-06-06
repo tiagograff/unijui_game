@@ -40,6 +40,7 @@ func _physics_process(delta) -> void:
 		var side =sign($Texture.scale.x)
 		fireball.position=self.position+Vector2(30*side,-30)
 		fireball.linear_velocity=Vector2(side*1000,0)
+		
 		get_node("..").add_child(fireball)
 
 func knockback_move():

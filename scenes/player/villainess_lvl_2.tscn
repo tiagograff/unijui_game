@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://bg3j8l5iumhxe"]
+[gd_scene load_steps=10 format=3 uid="uid://bg3j8l5iumhxe"]
 
 [ext_resource type="PackedScene" uid="uid://c4wya75xxvkjg" path="res://scenes/player/villainess.tscn" id="1_8sn8x"]
 [ext_resource type="Script" path="res://scripts/player/villainess_lvl_2.gd" id="2_bgibn"]
@@ -7,6 +7,8 @@
 [ext_resource type="Texture2D" uid="uid://bdmkaweinlybw" path="res://images/mana/mana6.png" id="5_7dwqg"]
 [ext_resource type="Texture2D" uid="uid://ctijhepn7gxv0" path="res://images/interface/Ativo 7-8.png" id="6_a58xe"]
 [ext_resource type="Texture2D" uid="uid://dqfrnp03apqm7" path="res://images/interface/Ativo 8-8.png" id="7_6mc2x"]
+[ext_resource type="Texture2D" uid="uid://02ibrcelpw3q" path="res://images/interface/Ativo 5-8.png" id="8_at1r7"]
+[ext_resource type="Texture2D" uid="uid://c68f3goyjdole" path="res://images/interface/Ativo 6-8.png" id="9_y43aw"]
 
 [node name="Villainess_lvl_2" instance=ExtResource("1_8sn8x")]
 script = ExtResource("2_bgibn")
@@ -32,3 +34,13 @@ texture = ExtResource("6_a58xe")
 position = Vector2(529, 252)
 scale = Vector2(0.108855, 0.109375)
 texture = ExtResource("7_6mc2x")
+
+[node name="Ativo5-8" type="Sprite2D" parent="Interface" index="9"]
+position = Vector2(36, 276)
+scale = Vector2(0.214286, 0.25)
+texture = ExtResource("8_at1r7")
+
+[node name="Ativo6-8" type="Sprite2D" parent="Interface" index="10"]
+position = Vector2(60, 276)
+scale = Vector2(0.333333, 0.25)
+texture = ExtResource("9_y43aw")

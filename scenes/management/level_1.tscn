@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=3 uid="uid://c3bes58fxro8l"]
+[gd_scene load_steps=17 format=3 uid="uid://c3bes58fxro8l"]
 
 [ext_resource type="PackedScene" uid="uid://cvryadbcsg71y" path="res://scenes/management/game_level.tscn" id="1_61skk"]
 [ext_resource type="PackedScene" uid="uid://dy7n70fq837tg" path="res://scenes/trap/trap.tscn" id="2_f8dn3"]
@@ -10,6 +10,7 @@
 [ext_resource type="Texture2D" uid="uid://cj8ch3m1oovqr" path="res://images/arvores/t3.png" id="6_w4a6r"]
 [ext_resource type="FontFile" uid="uid://b8kafgdikpmtu" path="res://assets/monogram.ttf" id="9_74cdf"]
 [ext_resource type="Script" path="res://scripts/management/Game_over.gd" id="10_qfy3o"]
+[ext_resource type="Texture2D" uid="uid://dqfrnp03apqm7" path="res://images/interface/Ativo 8-8.png" id="11_8scyt"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcxaw"]
 size = Vector2(279.5, 305)
@@ -28,6 +29,10 @@ outline_color = Color(0, 0, 0, 1)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_pfkiw"]
 size = Vector2(1483, 207)
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_s0tji"]
+radius = 11.0
+height = 22.0
 
 [node name="level_1" instance=ExtResource("1_61skk")]
 
@@ -83,7 +88,7 @@ position = Vector2(885, 399)
 position = Vector2(1273, 398)
 
 [node name="Slime4" parent="Enemys" index="3" instance=ExtResource("2_w5hkk")]
-position = Vector2(1656, 398)
+position = Vector2(1608, 399)
 
 [node name="Slime5" parent="Enemys" index="4" instance=ExtResource("2_w5hkk")]
 position = Vector2(1343, 398)
@@ -252,3 +257,15 @@ label_settings = SubResource("LabelSettings_cueix")
 [node name="Collision" type="CollisionShape2D" parent="Area_Hole" index="0" groups=["buraco"]]
 position = Vector2(1370, 567)
 shape = SubResource("RectangleShape2D_pfkiw")
+
+[node name="Portal" type="Area2D" parent="." index="10" groups=["portal"]]
+position = Vector2(-3, -77)
+
+[node name="Collision" type="CollisionShape2D" parent="Portal" index="0"]
+position = Vector2(1657, 461)
+shape = SubResource("CapsuleShape2D_s0tji")
+
+[node name="Sprite2D" type="Sprite2D" parent="Portal" index="1"]
+position = Vector2(1657, 461)
+scale = Vector2(0.139584, 0.140626)
+texture = ExtResource("11_8scyt")

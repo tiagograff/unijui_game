@@ -1,0 +1,34 @@
+[gd_scene load_steps=8 format=3 uid="uid://bg3j8l5iumhxe"]
+
+[ext_resource type="PackedScene" uid="uid://c4wya75xxvkjg" path="res://scenes/player/villainess.tscn" id="1_8sn8x"]
+[ext_resource type="Script" path="res://scripts/player/villainess_lvl_2.gd" id="2_bgibn"]
+[ext_resource type="PackedScene" uid="uid://dcd1e12a1cwin" path="res://scenes/management/interface.tscn" id="3_jogfy"]
+[ext_resource type="Texture2D" uid="uid://26yd3xiptfx0" path="res://images/vida/vida6.png" id="4_2hc2d"]
+[ext_resource type="Texture2D" uid="uid://bdmkaweinlybw" path="res://images/mana/mana6.png" id="5_7dwqg"]
+[ext_resource type="Texture2D" uid="uid://ctijhepn7gxv0" path="res://images/interface/Ativo 7-8.png" id="6_a58xe"]
+[ext_resource type="Texture2D" uid="uid://dqfrnp03apqm7" path="res://images/interface/Ativo 8-8.png" id="7_6mc2x"]
+
+[node name="Villainess_lvl_2" instance=ExtResource("1_8sn8x")]
+script = ExtResource("2_bgibn")
+
+[node name="Interface" parent="." index="11" instance=ExtResource("3_jogfy")]
+
+[node name="Vida6" type="Sprite2D" parent="Interface" index="5"]
+position = Vector2(552, 24)
+scale = Vector2(0.218182, 0.218182)
+texture = ExtResource("4_2hc2d")
+
+[node name="Mana6" type="Sprite2D" parent="Interface" index="6"]
+position = Vector2(528, 24)
+scale = Vector2(0.254545, 0.209091)
+texture = ExtResource("5_7dwqg")
+
+[node name="Ativo7-8" type="Sprite2D" parent="Interface" index="7"]
+position = Vector2(504, 252)
+scale = Vector2(0.1, 0.125)
+texture = ExtResource("6_a58xe")
+
+[node name="Sprite2D" type="Sprite2D" parent="Interface" index="8"]
+position = Vector2(529, 252)
+scale = Vector2(0.108855, 0.109375)
+texture = ExtResource("7_6mc2x")

@@ -1,7 +1,6 @@
 extends CharacterBody2D
 
 @onready var sprite: Sprite2D = get_node("Texture")
-
 var is_dead: bool = false
 var jump_count: int = 0
 var is_on_double_jump: bool = false
@@ -36,6 +35,12 @@ func _physics_process(delta) -> void:
 		if obj.is_in_group("enemy"):
 			obj.damage()
 			velocity.y = jump_speed
+	if Input.is_action_just_pressed("power"):
+		var fireball = power_comp.instantiate()
+		var side =sign($Texture.scale.x)
+		fireball.position=self.position+Vector2(30*side,-30)
+		fireball.linear_velocity=Vector2(side*1000,0)
+		get_node("..").add_child(fireball)
 
 func knockback_move():
 	velocity = knockback_direction * move_speed * 2
@@ -108,9 +113,8 @@ func _on_hitbox_area_entered(area):
 		transition_screen.fade_in()
 		get_tree().change_scene_to_file('res://scenes/management/level_1.tscn')
 		get_tree().paused = false
-
-
-
+	if area.is_in_group("line trap"):
+		pass
 
 func on_hitbox_body_entered(body):
 	if body.is_in_group("enemy"):

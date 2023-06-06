@@ -112,8 +112,7 @@ func _on_hitbox_area_entered(area):
 	if area.is_in_group("buraco"):
 		character_died()
 	if area.is_in_group("portal"):
-		get_tree().change_scene_to_file('res://scenes/management/level_1.tscn')
-
+		get_tree().change_scene_to_file('res://scenes/management/level_2.tscn')
 
 
 func on_hitbox_body_entered(body):

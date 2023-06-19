@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=3 uid="uid://c3bes58fxro8l"]
+[gd_scene load_steps=18 format=3 uid="uid://c3bes58fxro8l"]
 
 [ext_resource type="PackedScene" uid="uid://cvryadbcsg71y" path="res://scenes/management/game_level.tscn" id="1_61skk"]
 [ext_resource type="PackedScene" uid="uid://dy7n70fq837tg" path="res://scenes/trap/trap.tscn" id="2_f8dn3"]
@@ -11,6 +11,7 @@
 [ext_resource type="FontFile" uid="uid://b8kafgdikpmtu" path="res://assets/monogram.ttf" id="9_74cdf"]
 [ext_resource type="Script" path="res://scripts/management/Game_over.gd" id="10_qfy3o"]
 [ext_resource type="Texture2D" uid="uid://dqfrnp03apqm7" path="res://images/interface/Ativo 8-8.png" id="11_8scyt"]
+[ext_resource type="PackedScene" uid="uid://k3vs7l0dkuct" path="res://scenes/powers/mana.tscn" id="12_dxcro"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_kcxaw"]
 size = Vector2(279.5, 305)
@@ -269,3 +270,14 @@ shape = SubResource("CapsuleShape2D_s0tji")
 position = Vector2(1657, 461)
 scale = Vector2(0.139584, 0.140626)
 texture = ExtResource("11_8scyt")
+
+[node name="Mana" type="Node2D" parent="." index="11"]
+
+[node name="Mana" parent="Mana" index="0" instance=ExtResource("12_dxcro")]
+position = Vector2(1100, 369)
+
+[node name="Mana2" parent="Mana" index="1" instance=ExtResource("12_dxcro")]
+position = Vector2(1162, 368)
+
+[node name="Mana3" parent="Mana" index="2" instance=ExtResource("12_dxcro")]
+position = Vector2(1130, 369)

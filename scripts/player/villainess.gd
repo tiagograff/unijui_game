@@ -7,6 +7,7 @@ var jump_count: int = 0
 var is_on_double_jump: bool = false
 var on_knockback = false
 var max_health: float = 0.0
+var max_mana: int = 0
 var knockback_direction: Vector2
 var power_comp=preload("res://scenes/powers/power.tscn")
 
@@ -109,9 +110,9 @@ func _on_hitbox_area_entered(area):
 		get_tree().change_scene_to_file('res://scenes/management/level_1.tscn')
 		get_tree().paused = false
 
-
-
-
 func on_hitbox_body_entered(body):
 	if body.is_in_group("enemy"):
 		self.update_health(body.global_position, 10, "decrease")
+
+func _on_mana_0_texture_changed():
+	pass # Replace with function body.

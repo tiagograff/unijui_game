@@ -18,6 +18,7 @@ config/icon="res://icon.svg"
 [autoload]
 
 transition_screen="*res://scenes/management/transition_screen.tscn"
+Interface="*res://scenes/management/interface.tscn"
 
 [display]
 

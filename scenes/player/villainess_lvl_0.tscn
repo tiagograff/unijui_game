@@ -1,11 +1,9 @@
-[gd_scene load_steps=10 format=3 uid="uid://bxesarhe7rtwb"]
+[gd_scene load_steps=8 format=3 uid="uid://bxesarhe7rtwb"]
 
 [ext_resource type="PackedScene" uid="uid://c4wya75xxvkjg" path="res://scenes/player/villainess.tscn" id="1_rr63l"]
 [ext_resource type="FontFile" uid="uid://b8kafgdikpmtu" path="res://assets/monogram.ttf" id="2_onh7e"]
 [ext_resource type="Script" path="res://scripts/texts/Controls.gd" id="3_fywp4"]
 [ext_resource type="PackedScene" uid="uid://dcd1e12a1cwin" path="res://scenes/management/interface.tscn" id="4_7a33x"]
-[ext_resource type="Texture2D" uid="uid://buk0be61rda7r" path="res://images/vida/vida2.png" id="5_w2i05"]
-[ext_resource type="Texture2D" uid="uid://bi2dmw6nsixmf" path="res://images/mana/mana0.png" id="6_blrjx"]
 [ext_resource type="Texture2D" uid="uid://02ibrcelpw3q" path="res://images/interface/Ativo 5-8.png" id="7_rbcqq"]
 [ext_resource type="Texture2D" uid="uid://c68f3goyjdole" path="res://images/interface/Ativo 6-8.png" id="8_hexso"]
 
@@ -38,22 +36,12 @@ metadata/_edit_use_anchors_ = true
 
 [node name="Interface" parent="." index="11" instance=ExtResource("4_7a33x")]
 
-[node name="Vida2" type="Sprite2D" parent="Interface" index="5"]
-position = Vector2(552, 24)
-scale = Vector2(0.209091, 0.209091)
-texture = ExtResource("5_w2i05")
-
-[node name="Mana0" type="Sprite2D" parent="Interface" index="6"]
-position = Vector2(528, 24)
-scale = Vector2(0.281818, 0.209091)
-texture = ExtResource("6_blrjx")
-
-[node name="Ativo5-8" type="Sprite2D" parent="Interface" index="7"]
+[node name="Ativo5-8" type="Sprite2D" parent="Interface" index="5"]
 position = Vector2(36, 276)
 scale = Vector2(0.214286, 0.25)
 texture = ExtResource("7_rbcqq")
 
-[node name="Ativo6-8" type="Sprite2D" parent="Interface" index="8"]
+[node name="Ativo6-8" type="Sprite2D" parent="Interface" index="6"]
 position = Vector2(60, 276)
 scale = Vector2(0.333333, 0.25)
 texture = ExtResource("8_hexso")

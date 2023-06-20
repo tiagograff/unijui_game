@@ -1,12 +1,13 @@
 extends Area2D
 
-@export var mana: int = 0
 @export var mana_scenes: Array = []
 @export var sprite_copia: Sprite2D
 @onready var interface = get_tree().root.get_node("/root/Interface")
 @onready var Sprite: Sprite2D = get_node("Sprite")
+var frasco = null
 
 func _ready() -> void:
+	frasco =  get_node("/root/Interface")
 	mana_scenes.append(load("res://images/mana/mana0.png"))
 	mana_scenes.append(load("res://images/mana/mana1.png"))
 	mana_scenes.append(load("res://images/mana/mana2.png"))
@@ -17,19 +18,25 @@ func _ready() -> void:
 	
 	var sprite_original = interface.get_node("Mana") as Sprite2D
 	sprite_copia = sprite_original.duplicate()
-	sprite_copia.texture = mana_scenes[mana]
+	sprite_copia.texture = mana_scenes[frasco.mana]
 	interface.add_child(sprite_copia)
 
 func on_body_entered(body) -> void:
 	if body.is_in_group("character"):
-		mana += 1
-		if mana >= mana_scenes.size():
-			mana = 0 
+		frasco.mana += 1 
+		
+		for i in range(1,7):
+			var m = get_node("/root/Interface/Mana"+str(i))
+			if i <= frasco.mana:
+				m.visible=true
+			else:
+				m.visible=false
+#		if mana >= mana_scenes.size():
+#			mana = 0 
 		
 		var sprite_copia = interface.get_node("Mana") 
 		queue_free()
 		$Collision.disabled
 		if sprite_copia != null:
-			sprite_copia.texture = mana_scenes[mana]
 			queue_free()
 			$Collision.disabled

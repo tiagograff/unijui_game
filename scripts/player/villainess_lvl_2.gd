@@ -103,7 +103,7 @@ func character_died():
 	sprite.action_behavior("dead")
 	await get_tree().create_timer(0.5).timeout
 	$Dead.play()
-	get_node("../CanvasLayer2/Game_over").visible = true
+	get_node("CanvasLayer2/Game_over").visible = true
 	transition_screen.fade_in()
 	blink_restart_label()
 	
@@ -114,9 +114,13 @@ func _on_hitbox_area_entered(area):
 		transition_screen.fade_in()
 		get_tree().change_scene_to_file('res://scenes/management/level_1.tscn')
 		get_tree().paused = false
-	if area.is_in_group("line trap"):
-		pass
 
 func on_hitbox_body_entered(body):
 	if body.is_in_group("enemy"):
 		self.update_health(body.global_position, 10, "decrease")
+		
+
+func _on_area_trap_2d_body_entered(body):
+	if body.is_in_group("line_trap"):
+		var suspenso_collision: CollisionShape2D = get_node("Trap_slime/Area2D/Safe_line")
+		suspenso_collision.set_disabled(true)

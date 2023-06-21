@@ -253,6 +253,21 @@ grow_vertical = 0
 text = "PRESS SPACEBAR TO RESTART"
 label_settings = SubResource("LabelSettings_cueix")
 
+[node name="No_mana" type="Label" parent="CanvasLayer2" index="2"]
+visible = false
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -75.0
+offset_top = -23.0
+offset_right = 75.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "YOU'RE OUT OF MANA"
+label_settings = SubResource("LabelSettings_cueix")
+
 [node name="Area_Hole" type="Area2D" parent="." index="9" groups=["buraco"]]
 
 [node name="Collision" type="CollisionShape2D" parent="Area_Hole" index="0" groups=["buraco"]]

@@ -16,8 +16,18 @@ var power_direction: float = 0;
 @export var gravity_speed: float = 512.00
 @export var health: float = 30.0
 @export var damage: int
+var frasco = null
+var mana_scenes: Array = []
 
 func _ready() -> void:
+	frasco =  get_node("/root/Interface")
+	mana_scenes.append(load("res://images/mana/mana0.png"))
+	mana_scenes.append(load("res://images/mana/mana1.png"))
+	mana_scenes.append(load("res://images/mana/mana2.png"))
+	mana_scenes.append(load("res://images/mana/mana3.png"))
+	mana_scenes.append(load("res://images/mana/mana4.png"))
+	mana_scenes.append(load("res://images/mana/mana5.png"))
+	mana_scenes.append(load("res://images/mana/mana6.png"))
 	max_health = health
 
 func _physics_process(delta) -> void:
@@ -39,11 +49,24 @@ func _physics_process(delta) -> void:
 			velocity.y = jump_speed
 
 	if Input.is_action_just_pressed("power"):
-		var fireball = power_comp.instantiate()
-		var side = power_direction;
-		fireball.position=self.position+Vector2(30*side,-30)
-		fireball.linear_velocity=Vector2(side*1000,0)
-		get_node("..").add_child(fireball)
+		if(frasco.mana > 0):
+			var fireball = power_comp.instantiate()
+			var side = power_direction;
+			fireball.position=self.position+Vector2(30*side,-30)
+			fireball.linear_velocity=Vector2(side*1000,0)
+			get_node("..").add_child(fireball)
+			frasco.mana -= 1 
+			for i in range(1,7):
+				var m = get_node("/root/Interface/Mana"+str(i))
+				if i <= frasco.mana:
+					m.visible=true
+				else:
+					m.visible=false
+		else:
+			get_node("../CanvasLayer2/No_mana").visible = true
+			await get_tree().create_timer(1).timeout
+			get_node("../CanvasLayer2/No_mana").visible = false
+		
 
 func knockback_move():
 	velocity = knockback_direction * move_speed * 2

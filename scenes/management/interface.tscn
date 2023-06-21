@@ -44,35 +44,43 @@ scale = Vector2(0.12793, 0.117188)
 texture = ExtResource("5_we74b")
 
 [node name="Mana" type="Sprite2D" parent="."]
-position = Vector2(29, 108)
+position = Vector2(552.5, 27.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_k13y7")
 script = ExtResource("7_dltwy")
 
 [node name="Mana1" type="Sprite2D" parent="."]
 visible = false
+position = Vector2(552.25, 27.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_uvhkg")
 
 [node name="Mana2" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(29, 108)
+position = Vector2(552.5, 27.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_lfnwa")
 
 [node name="Mana3" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(29, 108)
+position = Vector2(552.5, 27.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_1sagy")
 
 [node name="Mana4" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(29, 108)
+position = Vector2(552.5, 27.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("11_083wx")
 
 [node name="Mana5" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(29, 108)
+position = Vector2(552.5, 27.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_iy2ct")
 
 [node name="Mana6" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(29, 108)
+position = Vector2(552.5, 27.5)
+scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_xv38l")

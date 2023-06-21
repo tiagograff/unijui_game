@@ -31,8 +31,6 @@ func on_body_entered(body) -> void:
 				m.visible=true
 			else:
 				m.visible=false
-#		if mana >= mana_scenes.size():
-#			mana = 0 
 		
 		var sprite_copia = interface.get_node("Mana") 
 		queue_free()

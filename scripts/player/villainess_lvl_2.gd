@@ -103,7 +103,7 @@ func character_died():
 	sprite.action_behavior("dead")
 	await get_tree().create_timer(0.5).timeout
 	$Dead.play()
- 	get_node("CanvasLayer2/Game_over").visible = true
+	get_node("CanvasLayer2/Game_over").visible = true
 	transition_screen.fade_in()
 	blink_restart_label()
 	

@@ -1,0 +1,51 @@
+[gd_scene load_steps=8 format=3 uid="uid://d31c5bu11a711"]
+
+[ext_resource type="Script" path="res://scenes/management/start_press.gd" id="1_8ua2s"]
+[ext_resource type="Texture2D" uid="uid://6c4pko7gplw6" path="res://images/background/background01.jpg" id="1_aixfo"]
+[ext_resource type="Script" path="res://scenes/env/start.gd" id="1_tsmm7"]
+[ext_resource type="Texture2D" uid="uid://da1s3ime26lsq" path="res://images/background/vilã2.png" id="2_hsyj7"]
+[ext_resource type="FontFile" uid="uid://b8kafgdikpmtu" path="res://assets/monogram.ttf" id="4_tidiu"]
+[ext_resource type="Script" path="res://scenes/management/start_label.gd" id="6_tbu7l"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_b3yjh"]
+font = ExtResource("4_tidiu")
+font_size = 26
+outline_size = 7
+outline_color = Color(0, 0, 0, 1)
+shadow_size = 4
+
+[node name="CanvasLayer" type="CanvasLayer"]
+script = ExtResource("1_8ua2s")
+
+[node name="Background" type="ParallaxBackground" parent="."]
+layer = 100
+script = ExtResource("1_tsmm7")
+direction = Vector2(-1, 0)
+move_speed = 19.2
+
+[node name="ParallaxLayer" type="ParallaxLayer" parent="Background"]
+motion_mirroring = Vector2(575, 648)
+
+[node name="TextureRect" type="TextureRect" parent="Background/ParallaxLayer"]
+offset_right = 575.0
+offset_bottom = 325.0
+texture = ExtResource("1_aixfo")
+expand_mode = 1
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = 101
+
+[node name="Vilã2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(292, 162)
+scale = Vector2(0.05, 0.05)
+texture = ExtResource("2_hsyj7")
+
+[node name="Label" type="Label" parent="CanvasLayer"]
+texture_filter = 1
+offset_left = 173.0
+offset_top = 293.0
+offset_right = 403.0
+offset_bottom = 319.0
+text = "press 'space' to start "
+label_settings = SubResource("LabelSettings_b3yjh")
+script = ExtResource("6_tbu7l")

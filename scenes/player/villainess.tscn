@@ -1,6 +1,7 @@
-[gd_scene load_steps=26 format=3 uid="uid://bhfrbw11rrw2m"]
+[gd_scene load_steps=27 format=3 uid="uid://bhfrbw11rrw2m"]
 
 [ext_resource type="Script" path="res://scripts/player/villainess.gd" id="1_24q3i"]
+[ext_resource type="Texture2D" uid="uid://omdm5rcyuw4p" path="res://images/villainess/idle_static.png" id="2_dk51b"]
 [ext_resource type="Texture2D" uid="uid://hx26bogflx4p" path="res://assets/Main Characters/Virtual Guy/Idle (32x32).png" id="2_tdhsj"]
 [ext_resource type="Script" path="res://scripts/player/villainess_texture.gd" id="3_6effc"]
 [ext_resource type="Texture2D" uid="uid://0yyaji8ec1q0" path="res://assets/Main Characters/Desappearing (96x96).png" id="4_qmt6y"]
@@ -366,8 +367,7 @@ shape = SubResource("CapsuleShape2D_h2tb5")
 
 [node name="Texture" type="Sprite2D" parent="." node_paths=PackedStringArray("animation", "villainess")]
 scale = Vector2(0.7, 0.7)
-texture = ExtResource("2_tdhsj")
-hframes = 11
+texture = ExtResource("2_dk51b")
 script = ExtResource("3_6effc")
 animation = NodePath("../Animation")
 villainess = NodePath("..")

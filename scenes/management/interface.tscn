@@ -1,11 +1,8 @@
-[gd_scene load_steps=15 format=3 uid="uid://dcd1e12a1cwin"]
+[gd_scene load_steps=19 format=3 uid="uid://dcd1e12a1cwin"]
 
 [ext_resource type="Script" path="res://scenes/management/interface.gd" id="1_tv6jc"]
 [ext_resource type="Texture2D" uid="uid://chkxjwvn67fji" path="res://images/interface/Ativo 18-8.png" id="1_xocwo"]
 [ext_resource type="Texture2D" uid="uid://cjqu8ixyjfskq" path="res://images/interface/Ativo 19-8.png" id="2_nscd5"]
-[ext_resource type="Texture2D" uid="uid://isb75uxc5imf" path="res://images/interface/Ativo 20-8.png" id="3_g83sh"]
-[ext_resource type="Texture2D" uid="uid://cut4bp0wmk3ro" path="res://images/interface/Ativo 16-8.png" id="4_3qn7j"]
-[ext_resource type="Texture2D" uid="uid://srnnullog355" path="res://images/interface/Ativo 17-8.png" id="5_we74b"]
 [ext_resource type="Texture2D" uid="uid://bi2dmw6nsixmf" path="res://images/mana/mana0.png" id="6_k13y7"]
 [ext_resource type="Script" path="res://scripts/powers/mana_show.gd" id="7_dltwy"]
 [ext_resource type="Texture2D" uid="uid://cre68uwldbkhi" path="res://images/mana/mana2.png" id="9_lfnwa"]
@@ -13,7 +10,14 @@
 [ext_resource type="Texture2D" uid="uid://b0wqbs8vw6sof" path="res://images/mana/mana3.png" id="10_1sagy"]
 [ext_resource type="Texture2D" uid="uid://bqy2lpdd0cnle" path="res://images/mana/mana4.png" id="11_083wx"]
 [ext_resource type="Texture2D" uid="uid://cjrux47xjnrcr" path="res://images/mana/mana5.png" id="12_iy2ct"]
+[ext_resource type="Texture2D" uid="uid://c0vbsy81l7tim" path="res://images/vida/vida0.png" id="12_p5deu"]
+[ext_resource type="Texture2D" uid="uid://bb1ps4ybapu6d" path="res://images/vida/vida1.png" id="13_e1qj8"]
 [ext_resource type="Texture2D" uid="uid://bdmkaweinlybw" path="res://images/mana/mana6.png" id="13_xv38l"]
+[ext_resource type="Texture2D" uid="uid://buk0be61rda7r" path="res://images/vida/vida2.png" id="14_6df3r"]
+[ext_resource type="Texture2D" uid="uid://byqdsati6frjo" path="res://images/vida/vida3.png" id="15_kojt1"]
+[ext_resource type="Texture2D" uid="uid://dormjg4nn1xdt" path="res://images/vida/vida4.png" id="16_or8od"]
+[ext_resource type="Texture2D" uid="uid://bj6kg0kvykw4t" path="res://images/vida/vida5.png" id="17_qbkdu"]
+[ext_resource type="Texture2D" uid="uid://26yd3xiptfx0" path="res://images/vida/vida6.png" id="18_i3ym2"]
 
 [node name="Interface" type="CanvasLayer"]
 script = ExtResource("1_tv6jc")
@@ -28,59 +32,84 @@ position = Vector2(48, 275)
 scale = Vector2(0.0546647, 0.0432433)
 texture = ExtResource("2_nscd5")
 
-[node name="Ativo20-8" type="Sprite2D" parent="."]
-position = Vector2(37.625, 25.625)
-scale = Vector2(0.0129702, 0.0203756)
-texture = ExtResource("3_g83sh")
-
-[node name="Ativo16-8" type="Sprite2D" parent="."]
-position = Vector2(25, 27)
-scale = Vector2(0.125, 0.09375)
-texture = ExtResource("4_3qn7j")
-
-[node name="Ativo17-8" type="Sprite2D" parent="."]
-position = Vector2(44.8125, 26.5)
-scale = Vector2(0.12793, 0.117188)
-texture = ExtResource("5_we74b")
-
 [node name="Mana" type="Sprite2D" parent="."]
-position = Vector2(552.5, 27.5)
+position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("6_k13y7")
 script = ExtResource("7_dltwy")
 
 [node name="Mana1" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(552.25, 27.5)
+position = Vector2(64.25, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_uvhkg")
 
 [node name="Mana2" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(552.5, 27.5)
+position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_lfnwa")
 
 [node name="Mana3" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(552.5, 27.5)
+position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("10_1sagy")
 
 [node name="Mana4" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(552.5, 27.5)
+position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("11_083wx")
 
 [node name="Mana5" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(552.5, 27.5)
+position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("12_iy2ct")
 
 [node name="Mana6" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(552.5, 27.5)
+position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_xv38l")
+
+[node name="Vida" type="Sprite2D" parent="."]
+position = Vector2(35, 276)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("12_p5deu")
+
+[node name="Vida1" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(35, 276)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("13_e1qj8")
+
+[node name="Vida2" type="Sprite2D" parent="."]
+position = Vector2(35, 276)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("14_6df3r")
+
+[node name="Vida3" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(35, 276)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("15_kojt1")
+
+[node name="Vida4" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(35, 276)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("16_or8od")
+
+[node name="Vida5" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(35, 276)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("17_qbkdu")
+
+[node name="Vida6" type="Sprite2D" parent="."]
+visible = false
+position = Vector2(35, 276)
+scale = Vector2(0.25, 0.25)
+texture = ExtResource("18_i3ym2")

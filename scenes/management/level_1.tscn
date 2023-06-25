@@ -99,7 +99,7 @@ position = Vector2(47, 317)
 texture = ExtResource("2_julds")
 
 [node name="Villainess_lvl1" parent="." index="5" instance=ExtResource("3_bxdqn")]
-position = Vector2(291, 368)
+position = Vector2(291, 370)
 
 [node name="Wall" type="Node2D" parent="." index="6"]
 metadata/_edit_lock_ = true

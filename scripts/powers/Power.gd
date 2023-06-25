@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-var timer_life=2.0
+var timer_life=1.5
 
 func _ready():
 	pass 

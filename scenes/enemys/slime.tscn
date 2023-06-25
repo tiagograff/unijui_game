@@ -1,12 +1,14 @@
-[gd_scene load_steps=11 format=3 uid="uid://c3leiijt46i16"]
+[gd_scene load_steps=13 format=3 uid="uid://c3leiijt46i16"]
 
 [ext_resource type="Script" path="res://scripts/enemy/slime.gd" id="1_u4rla"]
-[ext_resource type="Texture2D" uid="uid://602vip1r53hp" path="res://images/slime/i4.png" id="2_inuil"]
-[ext_resource type="Texture2D" uid="uid://boq3w6euv2qbq" path="res://images/slime/i5.png" id="3_5pv86"]
-[ext_resource type="Texture2D" uid="uid://lr3747id7q7h" path="res://images/slime/i6.png" id="4_gxv2j"]
-[ext_resource type="Texture2D" uid="uid://cmt5hbom24w3m" path="res://images/slime/i1.png" id="5_o2cp1"]
-[ext_resource type="Texture2D" uid="uid://d0gctwcrj8uy1" path="res://images/slime/i2.png" id="6_vqqip"]
-[ext_resource type="Texture2D" uid="uid://chaucixpl7p5h" path="res://images/slime/i3.png" id="7_x3w5g"]
+[ext_resource type="Texture2D" uid="uid://cxm3c4dxlolak" path="res://images/slime/Ativo 6-8.png" id="2_4k7lk"]
+[ext_resource type="Texture2D" uid="uid://bjh8lr0jkfp6c" path="res://images/slime/Ativo 7-8.png" id="3_0lpl2"]
+[ext_resource type="Texture2D" uid="uid://bil7b6lh10kr" path="res://images/slime/Ativo 9-8.png" id="4_s5kw8"]
+[ext_resource type="Texture2D" uid="uid://cvjknjny5xmnw" path="res://images/slime/Ativo 1-8.png" id="5_b757l"]
+[ext_resource type="Texture2D" uid="uid://djrd53ywltp04" path="res://images/slime/Ativo 8-8.png" id="5_hj6ss"]
+[ext_resource type="Texture2D" uid="uid://bnlj8mktgkbny" path="res://images/slime/Ativo 2-8.png" id="6_nxdb2"]
+[ext_resource type="Texture2D" uid="uid://wqhes32n7wab" path="res://images/slime/Ativo 4-8.png" id="7_7r4y8"]
+[ext_resource type="Texture2D" uid="uid://c0ecwk2bode55" path="res://images/slime/Ativo 3-8.png" id="8_m7qlx"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_iuqu1"]
 radius = 144.0
@@ -15,16 +17,16 @@ radius = 144.0
 animations = [{
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("2_inuil")
+"texture": ExtResource("2_4k7lk")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_5pv86")
+"texture": ExtResource("3_0lpl2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("4_gxv2j")
+"texture": ExtResource("4_s5kw8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("3_5pv86")
+"texture": ExtResource("5_hj6ss")
 }],
 "loop": false,
 "name": &"dead",
@@ -32,16 +34,16 @@ animations = [{
 }, {
 "frames": [{
 "duration": 1.0,
-"texture": ExtResource("5_o2cp1")
+"texture": ExtResource("5_b757l")
 }, {
 "duration": 1.0,
-"texture": ExtResource("6_vqqip")
+"texture": ExtResource("6_nxdb2")
 }, {
 "duration": 1.0,
-"texture": ExtResource("2_inuil")
+"texture": ExtResource("7_7r4y8")
 }, {
 "duration": 1.0,
-"texture": ExtResource("7_x3w5g")
+"texture": ExtResource("8_m7qlx")
 }],
 "loop": true,
 "name": &"stand",
@@ -64,12 +66,12 @@ metadata/_edit_lock_ = true
 
 [node name="Animated" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, -28)
-scale = Vector2(2.8, 2.889)
+scale = Vector2(0.9, 0.929)
 sprite_frames = SubResource("SpriteFrames_lw3mp")
-animation = &"stand"
+animation = &"dead"
 autoplay = "stand"
-frame = 1
-frame_progress = 0.307945
+frame = 3
+frame_progress = 1.0
 metadata/_edit_lock_ = true
 
 [node name="Ray_Right" type="RayCast2D" parent="."]

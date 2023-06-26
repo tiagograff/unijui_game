@@ -108,7 +108,7 @@ func _on_hitbox_area_entered(area):
 	if area.is_in_group("portal"):
 		transition_screen.fade_in()
 		get_tree().change_scene_to_file('res://scenes/management/level_1.tscn')
-		get_tree().paused = false
+		transition_screen.next_scene()
 
 func on_hitbox_body_entered(body):
 	if body.is_in_group("enemy"):

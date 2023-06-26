@@ -37,7 +37,7 @@ layer = 101
 
 [node name="Vilã2" type="Sprite2D" parent="CanvasLayer"]
 position = Vector2(292, 162)
-scale = Vector2(0.05, 0.05)
+scale = Vector2(0.06, 0.06)
 texture = ExtResource("2_hsyj7")
 
 [node name="Label" type="Label" parent="CanvasLayer"]
@@ -48,4 +48,6 @@ offset_right = 403.0
 offset_bottom = 319.0
 text = "press 'space' to start "
 label_settings = SubResource("LabelSettings_b3yjh")
+vertical_alignment = 1
+text_overrun_behavior = 4
 script = ExtResource("6_tbu7l")

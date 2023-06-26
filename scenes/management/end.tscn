@@ -1,0 +1,28 @@
+[gd_scene load_steps=3 format=3 uid="uid://cy12xh7h4c6bx"]
+
+[ext_resource type="PackedScene" uid="uid://d31c5bu11a711" path="res://scenes/management/start.tscn" id="1_l5cdo"]
+[ext_resource type="Texture2D" uid="uid://de10el3ss5pyq" path="res://images/background/finalbranco.png" id="2_sf6b7"]
+
+[node name="CanvasLayer" instance=ExtResource("1_l5cdo")]
+
+[node name="Vilã2" parent="CanvasLayer" index="0"]
+visible = false
+
+[node name="Label" parent="CanvasLayer" index="1"]
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -71.0
+offset_top = -27.0
+offset_right = 61.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "END (for now)"
+
+[node name="Finalbranco" type="Sprite2D" parent="CanvasLayer" index="2"]
+position = Vector2(296, 162)
+scale = Vector2(0.06, 0.06)
+texture = ExtResource("2_sf6b7")

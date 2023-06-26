@@ -1,8 +1,7 @@
-[gd_scene load_steps=27 format=3 uid="uid://bhfrbw11rrw2m"]
+[gd_scene load_steps=26 format=3 uid="uid://bhfrbw11rrw2m"]
 
 [ext_resource type="Script" path="res://scripts/player/villainess.gd" id="1_24q3i"]
 [ext_resource type="Texture2D" uid="uid://omdm5rcyuw4p" path="res://images/villainess/idle_static.png" id="2_dk51b"]
-[ext_resource type="Texture2D" uid="uid://hx26bogflx4p" path="res://assets/Main Characters/Virtual Guy/Idle (32x32).png" id="2_tdhsj"]
 [ext_resource type="Script" path="res://scripts/player/villainess_texture.gd" id="3_6effc"]
 [ext_resource type="Texture2D" uid="uid://0yyaji8ec1q0" path="res://assets/Main Characters/Desappearing (96x96).png" id="4_qmt6y"]
 [ext_resource type="Texture2D" uid="uid://w2dnpi3ir2ju" path="res://images/villainess/double jump.png" id="5_xux86"]
@@ -32,7 +31,7 @@ tracks/0/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [ExtResource("2_tdhsj")]
+"values": [ExtResource("2_dk51b")]
 }
 tracks/1/type = "value"
 tracks/1/imported = false
@@ -44,7 +43,7 @@ tracks/1/keys = {
 "times": PackedFloat32Array(0),
 "transitions": PackedFloat32Array(1),
 "update": 1,
-"values": [11]
+"values": [1]
 }
 tracks/2/type = "value"
 tracks/2/imported = false

@@ -19,6 +19,9 @@ health = 6
 
 [node name="Side" type="Node2D" parent="." index="0"]
 
+[node name="Footsteps" parent="." index="4"]
+volume_db = 2.0
+
 [node name="Power" type="Label" parent="Camera2D" index="0"]
 offset_left = -60.0
 offset_top = -31.0

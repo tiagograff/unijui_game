@@ -379,7 +379,7 @@ libraries = {
 
 [node name="Footsteps" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("10_okhcd")
-volume_db = -9.694
+volume_db = 2.0
 
 [node name="Footsteps_timer" type="Timer" parent="."]
 wait_time = 0.3
@@ -387,13 +387,15 @@ one_shot = true
 
 [node name="Jump" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("11_cutu3")
-volume_db = -25.0
+volume_db = 2.0
 
 [node name="Hit" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("12_m836m")
+volume_db = 2.0
 
 [node name="Dead" type="AudioStreamPlayer2D" parent="."]
 stream = ExtResource("13_6gr2a")
+volume_db = -36.0
 
 [node name="Ray_Jump" type="RayCast2D" parent="."]
 position = Vector2(0, 1)

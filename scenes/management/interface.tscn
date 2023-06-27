@@ -1,8 +1,7 @@
-[gd_scene load_steps=19 format=3 uid="uid://dcd1e12a1cwin"]
+[gd_scene load_steps=18 format=3 uid="uid://dcd1e12a1cwin"]
 
 [ext_resource type="Script" path="res://scenes/management/interface.gd" id="1_tv6jc"]
 [ext_resource type="Texture2D" uid="uid://chkxjwvn67fji" path="res://images/interface/Ativo 18-8.png" id="1_xocwo"]
-[ext_resource type="Texture2D" uid="uid://cjqu8ixyjfskq" path="res://images/interface/Ativo 19-8.png" id="2_nscd5"]
 [ext_resource type="Texture2D" uid="uid://bi2dmw6nsixmf" path="res://images/mana/mana0.png" id="6_k13y7"]
 [ext_resource type="Script" path="res://scripts/powers/mana_show.gd" id="7_dltwy"]
 [ext_resource type="Texture2D" uid="uid://cre68uwldbkhi" path="res://images/mana/mana2.png" id="9_lfnwa"]
@@ -22,16 +21,6 @@
 [node name="Interface" type="CanvasLayer"]
 script = ExtResource("1_tv6jc")
 
-[node name="Ativo18-8" type="Sprite2D" parent="."]
-position = Vector2(529.938, 275.313)
-scale = Vector2(0.075446, 0.0655758)
-texture = ExtResource("1_xocwo")
-
-[node name="Ativo19-8" type="Sprite2D" parent="."]
-position = Vector2(48, 275)
-scale = Vector2(0.0546647, 0.0432433)
-texture = ExtResource("2_nscd5")
-
 [node name="Mana" type="Sprite2D" parent="."]
 position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
@@ -40,7 +29,7 @@ script = ExtResource("7_dltwy")
 
 [node name="Mana1" type="Sprite2D" parent="."]
 visible = false
-position = Vector2(64.25, 277.5)
+position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("9_uvhkg")
 
@@ -74,6 +63,11 @@ position = Vector2(64.5, 277.5)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_xv38l")
 
+[node name="Ativo18-8" type="Sprite2D" parent="."]
+position = Vector2(529.938, 275.313)
+scale = Vector2(0.075446, 0.0655758)
+texture = ExtResource("1_xocwo")
+
 [node name="Vida" type="Sprite2D" parent="."]
 position = Vector2(35, 276)
 scale = Vector2(0.25, 0.25)
@@ -86,6 +80,7 @@ scale = Vector2(0.25, 0.25)
 texture = ExtResource("13_e1qj8")
 
 [node name="Vida2" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(35, 276)
 scale = Vector2(0.25, 0.25)
 texture = ExtResource("14_6df3r")

@@ -25,6 +25,7 @@ func on_body_entered(body) -> void:
 	if body.is_in_group("character"):
 		frasco.mana += 1 
 		
+		var mana = frasco.mana
 		for i in range(1,7):
 			var m = get_node("/root/Interface/Mana"+str(i))
 			if i <= frasco.mana:

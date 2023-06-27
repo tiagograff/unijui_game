@@ -6,7 +6,7 @@ var is_dead: bool = false
 var jump_count: int = 0
 var is_on_double_jump: bool = false
 var on_knockback = false
-var max_health: float = 0.0
+var max_health: int = 0
 var knockback_direction: Vector2
 var power_comp=preload("res://scenes/powers/power.tscn")
 var power_direction: float = 0;
@@ -14,21 +14,22 @@ var power_direction: float = 0;
 @export var move_speed: float = 96.00
 @export var jump_speed: float = -256.00
 @export var gravity_speed: float = 512.00
-@export var health: float = 30.0
+@export var health: int = 6
 @export var damage: int
 var frasco = null
 var mana_scenes: Array = []
 
 func _ready() -> void:
 	frasco =  get_node("/root/Interface")
-	mana_scenes.append(load("res://images/mana/mana0.png"))
-	mana_scenes.append(load("res://images/mana/mana1.png"))
-	mana_scenes.append(load("res://images/mana/mana2.png"))
-	mana_scenes.append(load("res://images/mana/mana3.png"))
-	mana_scenes.append(load("res://images/mana/mana4.png"))
-	mana_scenes.append(load("res://images/mana/mana5.png"))
-	mana_scenes.append(load("res://images/mana/mana6.png"))
+	mana_scenes.append(load("res://images/vida/vida0.png"))
+	mana_scenes.append(load("res://images/vida/vida1.png"))
+	mana_scenes.append(load("res://images/vida/vida2.png"))
+	mana_scenes.append(load("res://images/vida/vida3.png"))
+	mana_scenes.append(load("res://images/vida/vida4.png"))
+	mana_scenes.append(load("res://images/vida/vida5.png"))
+	mana_scenes.append(load("res://images/vida/vida6.png"))
 	max_health = health
+	update_health_interface()
 
 func _physics_process(delta) -> void:
 	if is_dead == true:
@@ -106,15 +107,22 @@ func update_health(_target_position: Vector2, value: int, type: String)-> void:
 		sprite.action_behavior("hit")
 		$Hit.play()
 		on_knockback = true
-		health = clamp(health - value, 0, max_health)
-		
+		health -= 1
 		if health == 0:
 			character_died()
-		return
-	if type == "increase":
-		health = clamp(health + value,0,max_health)
+		
+	else: if type == "increase":
+		health += 1
+		
+	update_health_interface()
 
-
+func update_health_interface() -> void:
+	for i in range(1,7):
+		var m = get_node("/root/Interface/Vida"+str(i))
+		if i <= health:
+			m.visible=true
+		else:
+			m.visible=false
 		
 func blink_restart_label():
 	while(true):

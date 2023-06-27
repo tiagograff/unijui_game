@@ -15,7 +15,7 @@ shadow_size = 2
 
 [node name="Villainess_lvl1" instance=ExtResource("1_38nqh")]
 script = ExtResource("2_u5lv5")
-health = 30.0
+health = 6
 
 [node name="Side" type="Node2D" parent="." index="0"]
 
